@@ -7,4 +7,10 @@
   <name>Archetype - FullstackJavaLabs</name>
   <url>http://maven.apache.org</url>
   <packaging>pom</packaging>
+  <modules>
+    <module>department-service</module>
+    <module>employee-service</module>
+    <module>notification-service</module>
+    <module>organization-service</module>
+  </modules>
 </project>
