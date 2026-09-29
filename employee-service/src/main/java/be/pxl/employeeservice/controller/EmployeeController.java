@@ -2,6 +2,7 @@ package be.pxl.employeeservice.controller;
 
 import be.pxl.employeeservice.domain.Employee;
 import be.pxl.employeeservice.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<Employee> add(@RequestBody Employee employee) {
+    public ResponseEntity<Employee> add(@Valid @RequestBody Employee employee) {
         return ResponseEntity.status(201).body(employeeService.add(employee));
     }
 
