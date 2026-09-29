@@ -2,10 +2,9 @@ package be.pxl.departmentservice.service;
 
 import be.pxl.departmentservice.domain.Department;
 import be.pxl.departmentservice.repository.DepartmentRepository;
-import lombok.*;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

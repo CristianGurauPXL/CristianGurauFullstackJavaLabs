@@ -2,7 +2,8 @@ package be.pxl.departmentservice.controller;
 
 import be.pxl.departmentservice.domain.Department;
 import be.pxl.departmentservice.service.DepartmentService;
-import lombok.*;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class DepartmentController {
     private final DepartmentService departmentService;
 
     @PostMapping
-    public ResponseEntity<Department> add(@RequestBody Department department) {
+    public ResponseEntity<Department> add(@Valid @RequestBody Department department) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(departmentService.add(department));
     }
