@@ -1,0 +1,64 @@
+services:
+  department-db:
+    image: mysql:8.4
+    container_name: department-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: departmentservice_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - department-db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+
+  employee-db:
+    image: mysql:8.4
+    container_name: employee-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeeservice_db
+    ports:
+      - "3308:3306"
+    volumes:
+      - employee-db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+
+  notification-db:
+    image: mysql:8.4
+    container_name: notification-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: notificationservice_db
+    ports:
+      - "3309:3306"
+    volumes:
+      - notification-db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+  organization-db:
+    image: mysql:8.4
+    container_name: organization-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: organizationservice_db
+    ports:
+      - "3310:3306"
+    volumes:
+      - organization-db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  department-db-data:
+  employee-db-data:
+  notification-db-data:
+  organization-db-data:
