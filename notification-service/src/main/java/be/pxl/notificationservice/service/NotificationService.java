@@ -1,5 +1,7 @@
 package be.pxl.notificationservice.service;
 
+import be.pxl.notificationservice.domain.Notification;
+import be.pxl.notificationservice.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

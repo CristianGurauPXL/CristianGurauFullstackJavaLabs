@@ -1,5 +1,6 @@
 package be.pxl.notificationservice.controller;
 
+import be.pxl.notificationservice.domain.Notification;
 import be.pxl.notificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
