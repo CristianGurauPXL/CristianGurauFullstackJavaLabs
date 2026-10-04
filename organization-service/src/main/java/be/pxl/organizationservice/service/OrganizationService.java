@@ -1,7 +1,7 @@
-package be.pxl.notificationservice.service;
+package be.pxl.organizationservice.service;
 
-import be.pxl.notificationservice.domain.Organization;
-import be.pxl.notificationservice.repository.OrganizationRepository;
+import be.pxl.organizationservice.domain.Organization;
+import be.pxl.organizationservice.repository.OrganizationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

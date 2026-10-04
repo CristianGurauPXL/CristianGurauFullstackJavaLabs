@@ -1,7 +1,7 @@
-package be.pxl.notificationservice.controller;
+package be.pxl.organizationservice.controller;
 
-import be.pxl.notificationservice.domain.Organization;
-import be.pxl.notificationservice.service.OrganizationService;
+import be.pxl.organizationservice.domain.Organization;
+import be.pxl.organizationservice.service.OrganizationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
