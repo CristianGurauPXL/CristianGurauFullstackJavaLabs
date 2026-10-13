@@ -1,5 +1,7 @@
 package be.pxl.employeeservice.service;
 
+import be.pxl.employeeservice.client.NotificationClient;
+import be.pxl.employeeservice.client.dto.NotificationRequest;
 import be.pxl.employeeservice.domain.Employee;
 import be.pxl.employeeservice.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
@@ -13,9 +15,12 @@ import java.util.Optional;
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private final NotificationClient notificationClient;
 
     public Employee add(Employee employee) {
-        return employeeRepository.save(employee);
+        Employee savedEmployee = employeeRepository.save(employee);
+        notificationClient.sendNotification(new NotificationRequest());
+        return savedEmployee;
     }
 
     public Optional<Employee> findById(Long id) {
